@@ -1,8 +1,8 @@
 #! /bin/bash
 #! /bin/bash
 
-PERSON1="Trump"
-PERSON2="Putin"
+PERSON1=$1
+PERSON2=$2
 echo "$PERSON1 :: Hello $PERSON2 How are you"
 echo "$PERSON2 :: Doing Good !Thanks for asking $PERSON1"
 echo "$PERSON1 :: What are you doing these days?"
