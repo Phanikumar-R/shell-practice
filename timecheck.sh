@@ -10,6 +10,6 @@ END-TIME=$(date +%s)
 
 echo "Ending time of the script: $END-TIME"
 
-TOTAL-TIME=$((END-TIME - START-TIME))
+TOTAL-TIME=$(($END-TIME - $START-TIME))
 
 echo "Total execution time of the script: $TOTAL-TIME seconds"
