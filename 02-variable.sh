@@ -7,3 +7,5 @@ echo "Hello, $username! Welcome to the Shell Scripting world."
 
 echo "Please enter your password:"
 read -s password
+
+echo "Success! Your login details are valid."
