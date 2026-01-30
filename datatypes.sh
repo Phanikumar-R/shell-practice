@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NUM1=150;
-NUM2=125;
+NUM2=phani;
 
 SUM=$((NUM1+NUM2));
 
