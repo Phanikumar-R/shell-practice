@@ -1,12 +1,12 @@
 #!/bin/bash
 
-USERID=$(id -u)
+# USERID=$(id -u)
 
-if [ $USERID -eq 0 ]; then
-    echo "You are logged in as root user."
-else
-    echo "You are logged in as a normal user."
-fi
+# if [ $USERID -eq 0 ]; then
+#     echo "You are logged in as root user."
+# else
+#     echo "You are logged in as a normal user."
+# fi
 
 
 ### alternatively we can try below way
@@ -14,6 +14,7 @@ fi
 if [ $USERID -ne 0 ]; then
 
     echo "Run this script as root user."
+    exit 1
 
 fi
 
