@@ -1,5 +1,5 @@
 #!/bin/bash
 
-TIMESTMAP=$(date)
+TIMESTMAP=$(date +"%Y-%m-%d %T")
 
 echo "script executed at: $TIMESTMAP"
