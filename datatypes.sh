@@ -19,4 +19,4 @@ echo "Your lucky number  is : $FAVUS";
 
 FRUITS=("MANGO" "APPLE" "BANANA");
 
-echo "list of fruits are :${FRUITS[@]}";
+echo "list of fruits are :${FRUITS[#]}";
