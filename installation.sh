@@ -7,3 +7,12 @@ if [ $USERID -eq 0 ]; then
 else
     echo "You are logged in as a normal user."
 fi
+
+
+### alternatively we can try below way
+
+if [ $USERID -ne 0 ]; then
+
+    echo "Run this script as root user."
+
+fi
