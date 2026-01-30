@@ -1,5 +1,5 @@
 #!/bin/bash
 
-TIMESTMAP=$(date +"%Y-%m-%d %T",'TZ="Chennai/Kolkata"')
+TIMESTMAP=$(date +%r)
 
 echo "script executed at: $TIMESTMAP"
