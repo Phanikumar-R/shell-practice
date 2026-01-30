@@ -9,3 +9,6 @@ echo "Please enter your password:"
 read -s password
 
 echo "Success! Your login details are valid."
+
+echo "Your password is $password ";
+
