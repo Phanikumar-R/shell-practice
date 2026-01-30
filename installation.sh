@@ -20,4 +20,11 @@ fi
 
 echo "Installing nginx web server..."
 
-dnf install nginx -y
+dnf install nginnnnx -y
+
+if [$? -ne 0 ]; then
+    echo "nginx installation failed."
+    exit 1
+else
+    echo "nginx installed successfully."    
+fi
