@@ -16,3 +16,7 @@ if [ $USERID -ne 0 ]; then
     echo "Run this script as root user."
 
 fi
+
+echo "Installing nginx web server..."
+
+dnf install nginx -y
