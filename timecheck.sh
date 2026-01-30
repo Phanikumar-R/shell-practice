@@ -1,15 +1,14 @@
 #!/bin/bash
 
-START-TIME=$(date +%s)
+START_TIME=$(date +%s)
 
-echo "Starting time of the script: $START-TIME"
+echo "Starting time of the script: $START_TIME"
 
 sleep 10;  # Simulating some script execution time with sleep
 
-END-TIME=$(date +%s)
+END_TIME=$(date +%s)
+echo "Ending time of the script: $END_TIME"
 
-echo "Ending time of the script: $END-TIME"
+TOTAL_TIME=$(($END_TIME-$START_TIME))
 
-TOTAL-TIME=$(($END-TIME - $START-TIME))
-
-echo "Total execution time of the script: $TOTAL-TIME seconds"
+echo "Total execution time of the script: $TOTAL_TIME seconds"
