@@ -3,13 +3,16 @@
 USERID=$(id -u)
 LOGS_FOLDER="/var/logs/shell-script"
 LOGS_FILE="/var/logs/shell-script/$0.log"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
-set -e  # Exit immediately if a command exits with a non-zero status
-
+set -e # Exit immediately if a command exits with a non-zero status
 
 
 if [ $USERID -ne 0 ]; then
-    echo "Run this script as root user." | tee -a $LOGS_FILE
+    echo -e "$R Run this script as root user. $N" | tee -a $LOGS_FILE
     exit 1
 fi
 
@@ -24,9 +27,15 @@ VALIDATE () {
     fi
 } 
 
-dnf install nginx -y &>> $LOGS_FILE
-# VALIDATE $? "nginx "
-dnf install mysql -y &>> $LOGS_FILE   
-# VALIDATE $? "mysql "
-dnf install nodejs -y &>> $LOGS_FILE
-# VALIDATE $? "nodejs "
+for package in $@ 
+
+do
+    dnf list installed $package &>> $LOGS_FILE
+    if [ $? -ne 0 ]; then
+        echo "$package is not installed. installing now" | tee -a $LOGS_FILE
+        dnf install $package -y &>> $LOGS_FILE
+        # VALIDATE $? "$package installation"
+    else
+        echo -e "$package is already installed. $Y skipping $N" | tee -a $LOGS_FILE
+    fi
+done
