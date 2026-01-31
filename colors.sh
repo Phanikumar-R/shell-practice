@@ -5,4 +5,4 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-echo -e "$R This is Phanikumar, $G LEARNING SHELL SCRIPTING "
+echo -e "$R This is Phanikumar $N   , $G LEARNING SHELL SCRIPTING $N  , $Y HAVE A GREAT DAY! $N"
