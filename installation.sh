@@ -11,16 +11,16 @@ USERID=$(id -u)
 
 ### alternatively we can try below way
 
-if [ $USERID -ne 0 ]; then
+# if [ $USERID -ne 0 ]; then
 
-    echo "Run this script as root user."
-    exit 1
+#     echo "Run this script as root user."
+#     exit 1
 
-fi
+# fi
 
-echo "Installing nginx web server..."
+# echo "Installing nginx web server..."
 
-dnf install nginx -y
+# dnf install nginx -y
 
 if [$? -ne 0 ]; then
     echo "nginx installation failed."
